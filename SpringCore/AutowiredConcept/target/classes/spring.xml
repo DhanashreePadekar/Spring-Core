@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- Create Dependency class object-->
+	<bean id="s" class="com.example.aw_byname.Silver"></bean>
+	<bean id="g" class="com.example.aw_byname.Gold"></bean>
+	<bean id="booking" class="com.example.aw_byname.Platinum"></bean>
+	<!-- Create Target class object-->
+	<bean id="bs" class="com.example.aw_byname.BookingService" autowire="byName"></bean>
+</beans>

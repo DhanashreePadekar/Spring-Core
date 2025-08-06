@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- Create Dependency class object-->
+	<bean id="s" class="com.example.Silver"></bean>
+	<bean id="g" class="com.example.Gold"></bean>
+	<bean id="p" class="com.example.Platinum"></bean>
+	<!-- Create Target class object-->
+	<bean id="bs" class="com.example.BookingService">
+	<!--Perform DI Using Constructor-arg or property tag (manual Wrring)-->
+		<constructor-arg name="booking" ref="g"></constructor-arg>
+	</bean>
+</beans>
